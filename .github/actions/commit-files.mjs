@@ -28,7 +28,7 @@ const res = await octokit.graphql(
         additions: [
           {
             "path": "submodule-demo",
-            "contents": Buffer.from("9dc0d11e6f5ea9fd25df9c5cda997e10728cc1cd").toString('base64')
+            "contents": Buffer.from("9cc5b5bb2d6e25eac2be88128670d3c254e0f66b").toString('base64')
           }
         ]
       },
