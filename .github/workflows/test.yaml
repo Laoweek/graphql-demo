@@ -1,4 +1,6 @@
 name: Execute Octokit script
+permissions:
+  contents: write
 on:
   workflow_dispatch:
   push:
@@ -17,6 +19,6 @@ jobs:
           node-version: 22
       - run: npm install @octokit/action
       - name: Run Octokit script
-        run: node .github/scripts/commit-files.js
+        run: node .github/actions/commit-files.js
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
