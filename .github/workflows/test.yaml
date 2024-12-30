@@ -1,0 +1,22 @@
+name: Execute Octokit script
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/**'
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci @octokit/action
+      - name: Run Octokit script
+        run: node .github/scripts/commit-files.js
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
