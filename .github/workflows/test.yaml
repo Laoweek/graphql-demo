@@ -15,7 +15,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - run: npm ci @octokit/action
+      - run: npm install @octokit/action
       - name: Run Octokit script
         run: node .github/scripts/commit-files.js
         env:
