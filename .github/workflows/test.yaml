@@ -19,6 +19,6 @@ jobs:
           node-version: 22
       - run: npm install @octokit/action
       - name: Run Octokit script
-        run: node .github/actions/commit-files.js
+        run: node .github/actions/commit-files.mjs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
