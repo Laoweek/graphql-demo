@@ -27,8 +27,8 @@ const res = await octokit.graphql(
       fileChanges: {
         additions: [
           {
-            "path": "README.txt",
-            "contents": Buffer.from("hello world\n").toString('base64')
+            "path": "submodule-demo",
+            "contents": Buffer.from("9dc0d11e6f5ea9fd25df9c5cda997e10728cc1cd").toString('base64')
           }
         ]
       },
