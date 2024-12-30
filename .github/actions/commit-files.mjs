@@ -28,7 +28,7 @@ const res = await octokit.graphql(
                 additions: [
 
                 ],
-                delections: [{
+                deletions: [{
                     "path": "submodule-demo",
                 }]
             },
